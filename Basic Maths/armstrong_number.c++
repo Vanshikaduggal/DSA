@@ -10,7 +10,6 @@ class Solution {
             int last=n%10;
             sum+=(last*last*last);
             n/=10;
-            rev=(rev*10)+last;
         }
         if(sum==dup)
         {
