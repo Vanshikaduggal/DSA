@@ -22,3 +22,5 @@ int main()
     return 0;
 }
 
+// Tine Complexity For this approach is O(n)
+
