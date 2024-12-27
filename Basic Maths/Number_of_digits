@@ -1,3 +1,6 @@
+This question is from GFG platform :
+In this question you have to divide by each digit present in the number . If the number is divisible by the digit than return count of that digit.
+
 class Solution {
   public:
     // Function to count the number of digits in n that evenly divide n
