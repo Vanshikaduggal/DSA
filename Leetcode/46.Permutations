@@ -1,0 +1,30 @@
+#include <vector>
+using namespace std;
+
+class Solution {
+private:
+    void permut(vector<int>& arr, vector<int>& temp, vector<vector<int>>& ans, vector<bool>& visited) {
+        if (temp.size() == arr.size()) { // Corrected the condition
+            ans.push_back(temp);
+            return;
+        }
+        for (int i = 0; i < arr.size(); i++) { // Iterate over `arr`
+            if (!visited[i]) {
+                visited[i] = true;
+                temp.push_back(arr[i]);
+                permut(arr, temp, ans, visited); // Recursive call
+                visited[i] = false;
+                temp.pop_back();
+            }
+        }
+    }
+    
+public:
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>> ans;
+        vector<int> temp;
+        vector<bool> visited(nums.size(), false);
+        permut(nums, temp, ans, visited); 
+        return ans;
+    }
+};
