@@ -29,13 +29,15 @@ class Constructor{
         balance=b;
     }
 
+    //INLINE CONSTRUCTOR
+    inline Constructor(string a,int b,int c):name(a),acc_num(b),balance(c){ 
+    } //IT WORK SAME AS OTHER CONSTRUCTOR IF WE WANT TO USE IT THEN WE HAVE TO DELETE THE OTHER CONSTRUCTOR WHICH IS GIVING SAME THREE PARAMETERS .
+
     void display()
     {
         cout<<name<<" "<<acc_num<<" "<< balance<<endl;
     }
-};
-
-int main()
+};int main()
 {
     Constructor A; // HERE WE HAD NOT PASSED ANY PARAMETER SO DEFAULT CONSTRUCTOR VALUE WILL BE STORED AND GIVEN AS OUTPUT HERE
     A.display();
