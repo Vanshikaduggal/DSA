@@ -33,6 +33,14 @@ class Constructor{
     inline Constructor(string a,int b,int c):name(a),acc_num(b),balance(c){ 
     } //IT WORK SAME AS OTHER CONSTRUCTOR IF WE WANT TO USE IT THEN WE HAVE TO DELETE THE OTHER CONSTRUCTOR WHICH IS GIVING SAME THREE PARAMETERS .
 
+    //COPY CONSTRUCTOR
+    Constructor(Constructor &B)
+    {
+        name=B.name;
+        acc_num=B.acc_num;
+        balance=B.acc_num;
+    }
+
     void display()
     {
         cout<<name<<" "<<acc_num<<" "<< balance<<endl;
@@ -45,4 +53,6 @@ class Constructor{
     B.display(); // PS D:\c++> ./a.exe
 //Vanshika 789 1000
 //vansh 1984069987 34  ------->> WHEN WE EXWCUTED THIS WE HAD GOT A GARBAGE VALUE FOR ACCOUNT_NUMBER AS IT IS IN PUBLIC BUT NOT PASSED IN CONSTRUCTOR
+     Constructor C(B);
+    C.display();
 }
