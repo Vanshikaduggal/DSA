@@ -4,7 +4,7 @@ using namespace std;
 class Customer{
     string name;
     int acc_num,balance;
-    static int total_customer; // USING THE STATIC KEYWORD WITH THIS HELP US TO USE THE INITIALIZED VALUE OF TOTAL_CUSTOMER
+    static int total_customer; // USING THE STATIC KEYWORD WITH THIS HELP US TO USE THE INITIALIZED VALUE OF TOTAL_CUSTOMER  /// STATIC IS ATTRIBUTE OF CLASSES OR CLASS MEMBERS
     public:
     Customer(string name,int acc_num,int balance)
     {
