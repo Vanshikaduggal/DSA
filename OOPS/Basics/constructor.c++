@@ -23,6 +23,12 @@ class Constructor{
         this->balance=balance; //this is used to store the address of object created 
     }
 
+    Constructor(string a,int b)
+    {
+        name=a;
+        balance=b;
+    }
+
     void display()
     {
         cout<<name<<" "<<acc_num<<" "<< balance<<endl;
@@ -33,4 +39,5 @@ int main()
 {
     Constructor A; // HERE WE HAD NOT PASSED ANY PARAMETER SO DEFAULT CONSTRUCTOR VALUE WILL BE STORED AND GIVEN AS OUTPUT HERE
     A.display();
+    Constructor B("vansh",34); //HERE WE HAVE PASSED ONLY TWO VALUES SO THE CONSTRUCTOR WITH 2 PARAMETER WILL BE CALLEDM
 }
