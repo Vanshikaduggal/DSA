@@ -8,10 +8,17 @@ class Human
     int age;
 
     public:
+
+    Human() // FIRST THE CONSTRUCTOR OF PARENT CLASS WILL BE CALLED THEN CONSTRUCTOR OF CHILD CLASS WILL BE CALLED
+    {
+        cout<<"Hello Human \n";
+    }
+
     void work() //THIS WILL BE TREATED AS PUBLIC IN STUDENT CLASS 
     {
         cout<<"I am working \n";
     }
+
 };
 
 class Student : public Human
@@ -26,6 +33,11 @@ class Student : public Human
         this->roll_no=roll_no;
         this->fees=fees;
     }
+
+   Student()
+   {
+    cout<<"Hello student";
+   }
 };
 
 int main()
