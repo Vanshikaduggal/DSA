@@ -71,3 +71,40 @@ int main()
     C3.display();
 
 }
+
+// 2. RUNTIME POLYMORPHISM :
+// VIRTUAL AND PURE VIRTUAL KEYWORD 
+
+#include<iostream>
+using namespace std;
+
+class Animal
+{
+    public:
+    virtual void speak() // when we use virtual keyword then it is decided at runtime so the value of dog speak will be printed 
+    {
+        cout<<"huhuhu\n";
+    }
+
+    // virtual void speak() =0; THIS IS PURE VIRTUAL FUNCTION IT IS ALSO KNOWN AS ABSTRACT CLASS
+    // WHEN IT IS CREATED THEN NO OBJECT IS CREATED OF THAT OBJECT 
+
+};
+
+class Dog :public Animal
+{
+    public :
+
+    void speak()
+    {
+        cout<<"bark\n";
+    }
+};
+
+int main()
+{
+    Animal *p; // PARENT CLASS POINTER CAN STORE ADDRESS OF CHILD CLASS 
+    p=new Dog();
+    p->speak(); // THIS IS DECIDED IN COMPILE TIME ONLY WHICH SPEAK FUNCTION IT WILL EXECUTE IF WE DONOT USE VIRTUAL KEYWORD
+
+}
