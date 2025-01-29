@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int minimumAverageDifference(vector<int>& nums) {
+        int index=0,maxdiff=INT_MAX;
+        long long totalSum=0,preSum=0;
+        int n=nums.size();
+        for(int i=0;i<n;i++)
+        {
+            totalSum+=nums[i];
+        }
+
+        for(int i=0;i<n;i++)
+        {
+            preSum+=nums[i];
+            long long left=(preSum)/(i+1);
+            long long right=(i==n-1)?0:(totalSum-preSum)/(n-i-1);
+            int diff =abs(left-right);
+            if(diff<maxdiff)
+            {
+                maxdiff=diff;
+                index=i;
+            }
+        }
+        return index;
+    }
+};
