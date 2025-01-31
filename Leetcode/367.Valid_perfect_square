@@ -1,0 +1,7 @@
+class Solution {
+public:
+    bool isPerfectSquare(int num) {
+        int sqr=(int)sqrt(num);
+        return sqr*sqr==num;
+    }
+};
