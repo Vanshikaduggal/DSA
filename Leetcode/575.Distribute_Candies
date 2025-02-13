@@ -1,0 +1,10 @@
+class Solution {
+public:
+    int distributeCandies(vector<int>& nums) {
+        int n=nums.size();
+        unordered_set s(nums.begin(),nums.end());
+        int u=s.size();
+        if(u<=n/2) return u;
+        else return n/2;
+    }
+};
